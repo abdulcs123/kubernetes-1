@@ -1,0 +1,31 @@
+
+$ sudo apt-get update && apt-get install lxc -y
+$ sudo systemctl status lxc
+$ lxd init
+
+$ lxc profile create k8s
+$ cat k8s-profile-config | lxc profile edit k8s
+$ lxc profile list
+
+$ lxc launch ubuntu:20.04 kmaster --profile k8s
+Creating kmaster
+Starting kmaster
+
+$ lxc launch ubuntu:20.04 kworker1 --profile k8s
+Creating kworker1
+Starting kworker1
+
+$ lxc launch ubuntu:20.04 kworker2 --profile k8s
+Creating kworker2
+Starting kworker2
+
+$ lxc list
+
+$ cat bootstrap-kube.sh | lxc exec kmaster bash
+$ cat bootstrap-kube.sh | lxc exec kworker1 bash
+$ cat bootstrap-kube.sh | lxc exec kworker2 bash
+
+kubectl install
+scp root@kmaster@example.com:/etc/kubernetes/admin.conf ~/.kube/config
+
+lxc exec kmaster bash

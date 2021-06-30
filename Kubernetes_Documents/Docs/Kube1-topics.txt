@@ -1,0 +1,50 @@
+https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+Pods
+Deployment
+Containers
+Imperative Approach (kubectl)
+Declarative "  (YAML)
+Affinity
+Anti-Affinity
+Replication Controller
+Replicaset
+	* matchexpressions
+	   Key 
+	   Operator
+	   Values
+NodeSelector
+Labels-------->
+DaemonSet
+StaticPod
+ConfigMap
+Secrets
+InitContainer 
+Pods Health check
+	* Liveness Probe
+	* Readiness Probe
+Resources Quota 
+PodNodeSelector Admission Control Plugin | Assigning pods to nodes
+kubectl patch
+StatefulSet *
+	Headless Services
+	volumeclaimtemplates
+Jobs *
+Cronjobs *
+LimitRange
+Taint & Tolerant *
+hpa *
+metrics
+vpa *
+Role *
+PodDisruptionBudget (PDB).
+RoleBinding *
+ClusterRole *
+ClusterRoleBinding *
+Certificate *
+ServiceAccount *
+Token *
+nfs *
+helm *
+user *
+ingress *
+
